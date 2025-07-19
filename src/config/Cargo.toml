@@ -11,4 +11,4 @@ repository.workspace = true
 [dependencies]
 config = { workspace = true }
 serde = { workspace = true }
-camellia-env = { path = "../env" }
+camellia-env = { path = "../env", version = "0.0.1-alpha.2" }
