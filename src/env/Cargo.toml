@@ -1,0 +1,13 @@
+[package]
+name = "camellia-env"
+edition.workspace = true
+version = "0.0.0-alpha.2"
+description = "Runtime environment detection library with build-time fallbacks for Rust applications"
+readme = "./README.md"
+license.workspace = true
+authors.workspace = true
+include.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[dependencies]

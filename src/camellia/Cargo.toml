@@ -1,0 +1,19 @@
+[package]
+name = "landmap-camellia"
+version = "0.1.0"
+readme = "./README.md"
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+include.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[dependencies]
+camellia-env = { path = "../env", version = "0.0.0-alpha.1", optional = true }
+camellia-config-ext = { path = "../config", version = "0.0.1-alpha.1", optional = true }
+
+[features]
+default = ["config", "env"]
+config = ["camellia-env", "camellia-config-ext"]
+env = ["camellia-env"]
