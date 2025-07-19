@@ -2,6 +2,7 @@
 name = "camellia-config-ext"
 edition.workspace = true
 version = "0.0.1-alpha.1"
+description = "Extension traits for the config crate providing environment-aware configuration loading with schema support"
 license.workspace = true
 authors.workspace = true
 include.workspace = true
