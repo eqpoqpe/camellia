@@ -1,18 +1,18 @@
 use crate::options::UseConfigOptions;
 use camellia_env::app_env;
-use config::{ConfigBuilder, ConfigError, Environment, File, builder};
+use config::{ConfigBuilder, Environment, File, builder};
 
 pub trait ConfigBuilderExt {
-    fn add_config_sources(self, options: UseConfigOptions) -> Self;
-}
-
-impl ConfigBuilderExt for ConfigBuilder<builder::DefaultState> {
     /// Adds configuration sources based on the provided options.
     /// This includes a base config file, environment-specific files, and environment variables.
     /// # Arguments:
     /// - `options`: Configuration options that specify schema and environment variable behavior.
     /// # Returns:
     /// A modified `ConfigBuilder` with the added sources.
+    fn add_config_sources(self, options: UseConfigOptions) -> Self;
+}
+
+impl ConfigBuilderExt for ConfigBuilder<builder::DefaultState> {
     fn add_config_sources(self, options: UseConfigOptions) -> Self {
         // Start with the base config file
         let schema = options.schema.as_deref().unwrap_or("default");
@@ -46,15 +46,4 @@ impl ConfigBuilderExt for ConfigBuilder<builder::DefaultState> {
 
         cb
     }
-}
-
-/// Environment variables can override the values in Config.toml
-pub fn init_config<T: serde::de::DeserializeOwned>(
-    options: crate::options::UseConfigOptions,
-) -> Result<T, ConfigError> {
-    let config = config::Config::builder()
-        .add_config_sources(options)
-        .build()?;
-
-    config.try_deserialize()
 }

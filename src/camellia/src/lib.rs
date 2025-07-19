@@ -46,17 +46,13 @@ pub mod env {
 ///
 /// # Example:
 /// ```rust
-/// use landmap_camellia::config::{init_config, UseConfigOptions};
+/// use landmap_camellia::config::{UseConfigOptionsBuilder};
 ///
-/// let options = UseConfigOptions::builder()
+/// let options = UseConfigOptionsBuilder::new()
 ///     .schema("myapp")
 ///     .build();
-/// // To use init_config, you would need a struct that implements Deserialize
-/// // let config: MyConfig = init_config(options)?;
 /// ```
 #[cfg(feature = "config")]
 pub mod config {
-    pub use camellia_config_ext::{
-        ConfigBuilderExt, UseConfigOptions, UseConfigOptionsBuilder, init_config,
-    };
+    pub use camellia_config_ext::{ConfigBuilderExt, UseConfigOptions, UseConfigOptionsBuilder};
 }
