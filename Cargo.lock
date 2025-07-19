@@ -487,13 +487,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "try-env"
-version = "0.1.0"
-dependencies = [
- "landmap-camellia",
-]
-
-[[package]]
 name = "typenum"
 version = "1.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

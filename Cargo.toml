@@ -1,4 +1,4 @@
-workspace.members = ["src/camellia", "src/config", "src/env", "tests/try-env"]
+workspace.members = ["src/camellia", "src/config", "src/env"]
 workspace.resolver = "3"
 
 [workspace.package]
