@@ -1,7 +1,6 @@
 //! Camellia - A utility library usage by Landmap.
 //!
-//! This library provides optional modules for environment management, configuration,
-//! and JWT authentication based on feature flags.
+//! This library provides optional modules for environment management and configuration.
 
 /// Environment management utilities
 ///
