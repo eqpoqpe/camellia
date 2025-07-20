@@ -1,4 +1,4 @@
-//! Camellia - A utility library usage by Landmap.
+//! Camellia - A utility library.
 //!
 //! This library provides optional modules for environment management and configuration.
 

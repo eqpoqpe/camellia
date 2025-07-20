@@ -45,7 +45,7 @@ dependencies = [
 
 [[package]]
 name = "camellia-config-ext"
-version = "0.0.1-alpha.1"
+version = "0.0.1-alpha.2"
 dependencies = [
  "camellia-env",
  "config",
@@ -233,7 +233,7 @@ dependencies = [
 
 [[package]]
 name = "landmap-camellia"
-version = "0.0.1-alpha.3"
+version = "0.0.1-alpha.4"
 dependencies = [
  "camellia-config-ext",
  "camellia-env",

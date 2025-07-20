@@ -37,11 +37,7 @@ impl ConfigBuilderExt for ConfigBuilder<builder::DefaultState> {
 
         // Add environment variables if not disabled
         if !options.disable_env {
-            cb = cb.add_source(
-                Environment::default()
-                    .separator("__")
-                    .prefix(&schema.to_uppercase()),
-            );
+            cb = cb.add_source(Environment::default().separator("__").prefix(&schema));
         }
 
         cb
