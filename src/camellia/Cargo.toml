@@ -18,3 +18,6 @@ camellia-config-ext = { path = "../config", version = "0.0.1-alpha.2", optional 
 default = ["config", "env"]
 config = ["dep:camellia-config-ext"]
 env = ["dep:camellia-env"]
+
+[lib]
+doctest = false
