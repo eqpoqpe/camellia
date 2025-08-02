@@ -1,4 +1,4 @@
-# Camellia Config Extensions
+# Config Extensions
 
 ## License
 
